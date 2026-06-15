@@ -1,4 +1,3 @@
-pcall(function() getgenv().LOADEDGAG2 = true end)
 if not game:IsLoaded() then game.Loaded:Wait() end
 
 
