@@ -1,6 +1,8 @@
 pcall(function() getgenv().LOADEDGAG2 = true end)
 if not game:IsLoaded() then game.Loaded:Wait() end
 
+task.wait(2)
+
 local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
 local HttpService = game:GetService("HttpService")
