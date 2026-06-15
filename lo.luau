@@ -1,6 +1,5 @@
 pcall(function() getgenv().LOADEDGAG2 = true end)
 if not game:IsLoaded() then game.Loaded:Wait() end
-queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/nitrolden-dot/blacklist/refs/heads/main/lo.luau'))()")
 
 local Players = game:GetService("Players")
 local TeleportService = game:GetService("TeleportService")
@@ -14,6 +13,7 @@ function missing(t, f, fallback)
 end
 
 queueteleport =  missing("function", queue_on_teleport or (syn and syn.queue_on_teleport) or (fluxus and fluxus.queue_on_teleport))
+queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/nitrolden-dot/blacklist/refs/heads/main/lo.luau'))()")
 
 local Filter = {
     "Legendary",
