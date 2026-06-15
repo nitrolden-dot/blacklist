@@ -131,6 +131,5 @@ local TeleportCheck = false
 Players.LocalPlayer.OnTeleport:Connect(function(State)
     if (not TeleportCheck) and queueteleport then
         TeleportCheck = true
-        queueteleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/nitrolden-dot/blacklist/refs/heads/main/lo.luau'))()")
     end
 end)
